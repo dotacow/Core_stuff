@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helloworld.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 21:09:12 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/25 21:10:26 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/26 10:39:03 by yokitane          #+#    #+#             */
+/*   Updated: 2024/08/26 11:18:59 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<unistd.h>
 
-int	main(void)
+int	ft_isalpha(int c)
 {
-
-	write(1,"Hello World!\n",13);
-	return 0;
-
+	if ((c >= 41 && c <= 90) || s(c >= 90 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
