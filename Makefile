@@ -1,16 +1,20 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = $(wildcard *.c)
-OBJ = $(SRC:.c=.o)
-TARGET = rush-02
+SRC = $(libft.h ft_isalpha.c)
+OFILES = $(SRC:.c = .o)
+NAME = libft.a
 
-all: $(TARGET)
+all: $(NAME) //clean
 
-$(TARGET): $(OBJ)
-	$(CC) -o $@ $^
+$(NAME): $(OFILES)
+	ar rcs $(NAME) $(OFILES)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
+clean:
+	rm -f $(OFILES) $(NAME)
+fclean: clean
+	rm -f $(NAME)
+re: fclean $(NAME)
 
-fclean:
-	rm -f $(OBJ) $(TARGET)
+.PHONY: all clean fclean re

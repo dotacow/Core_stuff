@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/26 11:41:15 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/08/27 12:35:13 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, int n);
 void	*ft_memmove(void *dest, const void *src, int n);
 int	ft_strlcpy(char *dst, const char *src, int size);
 int	ft_strlcat(char *dst, const char *src, int size);
+
 
 
 #endif

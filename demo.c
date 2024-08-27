@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   demo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:39:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/27 12:35:11 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/27 08:47:57 by yokitane          #+#    #+#             */
+/*   Updated: 2024/08/27 12:35:12 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
 #include	"libft.h"
+#include	<stdio.h>
 
-int	ft_isalpha(int c)
+int	main(void)
 {
-	if ((c >= 41 && c <= 90) || (c >= 90 && c <= 122))
-		return (1);
-	else
-		return (0);
+	printf("ft_isalpha('a') returns: %i\n",ft_isalpha('a'));
+	printf("ft_isalpha('9') returns: %i\n",ft_isalpha('9'));
 }
