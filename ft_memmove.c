@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:39:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/28 11:52:02 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/29 11:01:37 by yokitane          #+#    #+#             */
+/*   Updated: 2024/08/29 14:53:39 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-int	ft_isalpha(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	unsigned char		*tmpdest;
+	const unsigned char	*tmpsrc;
+	size_t				i;
+
+	if (!dest && !src)
+		return (dest);
+	if (dest > src)
+	{
+		ft_memcpy(dest, src, n);
+		return (dest);
+	}
+	tmpdest = dest;
+	tmpsrc = src;
+	i = 0;
+	while (n > 0)
+	{
+		tmpdest[i] = tmpsrc[i];
+		i++;
+	}
+	return (dest);
 }
