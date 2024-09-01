@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 11:02:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/28 11:52:03 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/29 15:08:02 by yokitane          #+#    #+#             */
+/*   Updated: 2024/08/30 15:43:20 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	char	*rtr;
+	char	p;
+
+	p = (char)c;
+	rtr = (char *)s;
+	while (*rtr)
+	{
+		if (*rtr == p)
+			return (rtr);
+		rtr++;
+	}
+	if (*rtr == p)
+		return (rtr);
+	return (NULL);
 }

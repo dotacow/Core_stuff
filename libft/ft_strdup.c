@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 11:02:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/28 11:52:03 by yokitane         ###   ########.fr       */
+/*   Created: 2024/09/01 10:53:57 by yokitane          #+#    #+#             */
+/*   Updated: 2024/09/01 10:59:23 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-int	ft_isprint(int c)
+char	*strdup(const char *s)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	char	*str;
+	int		i;
+
+
 }

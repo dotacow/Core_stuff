@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 11:02:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/28 11:52:03 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/29 15:00:06 by yokitane          #+#    #+#             */
+/*   Updated: 2024/08/29 15:03:40 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
+	char	chr;
+
+	chr = c;
+	if (chr >= 'A' && chr <= 'Z')
+	{
+		return (c + 32);
+	}
 	else
-		return (0);
+		return (c);
 }

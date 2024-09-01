@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 11:01:37 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/30 15:33:25 by yokitane         ###   ########.fr       */
+/*   Created: 2024/08/30 18:51:28 by yokitane          #+#    #+#             */
+/*   Updated: 2024/09/01 10:08:40 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
-	unsigned char		*tmpdest;
-	const unsigned char	*tmpsrc;
+	char	*bigtmp;
+	size_t	i;
 
-	if (!dest && !src)
-		return (dest);
-	if (dest < src)
+	i = 0;
+	bigtmp = (char *)big;
+	if (lit[0] == '\0' || big == lit)
+		return (bigtmp);
+	if (len == 0)
+		return (NULL);
+	if (ft_strlen(lit) > len && big[0] != '\0')
+		return (NULL);
+	while (*bigtmp && (i <= (len - ft_strlen(lit))))
 	{
-		ft_memcpy(dest, src, n);
-		return (dest);
+		if (ft_strncmp(bigtmp, lit, ft_strlen(lit)) == 0)
+			return (bigtmp);
+		bigtmp++;
+		i++;
 	}
-	tmpdest = dest;
-	tmpsrc = src;
-	while (n--)
-		tmpdest[n] = tmpsrc[n];
-	return (dest);
+	return (NULL);
 }
