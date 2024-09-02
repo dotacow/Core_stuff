@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 10:53:57 by yokitane          #+#    #+#             */
-/*   Updated: 2024/09/01 11:44:52 by yokitane         ###   ########.fr       */
+/*   Created: 2024/09/01 12:38:25 by yokitane          #+#    #+#             */
+/*   Updated: 2024/09/01 12:57:22 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
 	size_t	i;
+	size_t	len1;
+	size_t	len2;
+	char	*str;
 
-	str = malloc(ft_strlen(s) + 1);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	str = malloc (len1 + len2 + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < ft_strlen(s))
+	while (i < len1)
 	{
-		str[i] = (char)s[i];
+		str[i] = s1[i];
 		i++;
 	}
-	str[i] = '\0';
+	i = 0;
+	while (i < len2)
+	{
+		str[i + len1] = s2[i];
+		i++;
+	}
+	str[i + len1] = '\0';
 	return (str);
 }
