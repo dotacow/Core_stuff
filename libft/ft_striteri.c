@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 16:28:24 by yokitane          #+#    #+#             */
-/*   Updated: 2024/09/02 16:00:23 by yokitane         ###   ########.fr       */
+/*   Created: 2024/09/03 15:32:05 by yokitane          #+#    #+#             */
+/*   Updated: 2024/09/03 16:15:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-char	**ft_split(char const *s, char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	(void)s;
-	(void)c;
-	return (NULL);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
 }

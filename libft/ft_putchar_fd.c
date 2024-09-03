@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 16:28:24 by yokitane          #+#    #+#             */
-/*   Updated: 2024/09/02 16:00:23 by yokitane         ###   ########.fr       */
+/*   Created: 2024/09/03 15:49:37 by yokitane          #+#    #+#             */
+/*   Updated: 2024/09/03 15:50:34 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-char	**ft_split(char const *s, char c)
+void	ft_putchar_fd(char c, int fd)
 {
-	(void)s;
-	(void)c;
-	return (NULL);
+	write(fd, &c, 1);
 }
