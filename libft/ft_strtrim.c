@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 13:29:08 by yokitane          #+#    #+#             */
-/*   Updated: 2024/09/09 20:09:30 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/09/02 09:30:47 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	last = ft_strlen(s1);
 	if (!s1 || !set)
 		return (NULL);
-	while (first <= ft_strlen(s1) && ft_strchr(set, s1[first])) //xxxx hi xxxx
+	while (first <= ft_strlen(s1) && ft_strchr(set, s1[first]))
 		first++;
 	while (last > first && ft_strchr(set, s1[last - 1]))
 		last--;
