@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:00:55 by yokitane          #+#    #+#             */
-/*   Updated: 2024/09/02 16:28:02 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/09/08 19:42:04 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_len(long int n)
+static int	get_len(long int n)
 {
 	int	i;
 
