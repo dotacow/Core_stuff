@@ -1,0 +1,27 @@
+-----------**Commands**
+
+(creating user) sudo adduser <username>
+(adding user to group) sudo usermod -aG <groupname> <username>
+(group members) getent group <groupname>
+
+(path of config for sshd) etc/ssh/shhd_config
+(hostname and hosts path) etc/hostname then etc/hosts
+
+(checking if installed) dpkg -l |grep <thing>
+
+(ssh) sudo systemctl status ssh
+(ufw) sudo ufw status
+(pswd rules) sudo chage -l username
+
+----------**checklist**
+
+-sudo config
+	-restrict sudo access
+	-sudo log(/var/log/sudo)
+	-custom sudo failure message 
+	-3 attempts 
+	-tty mode enabled
+-password policy
+	-change root pass according to policy
+-monitoring.sh
+	-cron
